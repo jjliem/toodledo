@@ -36,7 +36,7 @@ useEffect(() => {
     alert(`Reminder Added : ${input.taskName} `);
   setTaskList(taskList.concat(input));
     console.clear();
-    let sms = { phoneNumber: "7738089715",  message: input.description };
+    let sms = { phoneNumber: "INSERT NEW NUMBER HERE",  message: input.description };
     axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
     axios.post('http://localhost:8080/api/v1/sms', sms)
           .then(res => {
